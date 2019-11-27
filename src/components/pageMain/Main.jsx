@@ -1,52 +1,55 @@
-import React from 'react'
-import Header from '../header/Header'
-import Block from '../block/Block'
-import { Link } from 'react-router-dom'
-import './main.scss'
-import first from './assets/img/1-event.png'
-import second from './assets/img/2-event.png'
-import third from './assets/img/3-event.png'
-import firstDiscount from './assets/img/1-discount.png'
-import secondDiscount from './assets/img/2-discount.png'
-import thirdDiscount from './assets/img/3-discount.png'
-import fourDiscount from './assets/img/4-discount.png'
-import fiveDiscount from './assets/img/5-discount.png'
-import sixDiscount from './assets/img/6-discount.png'
-import firstNews from './assets/img/img-news-1.png'
-import secondNews from './assets/img/img-news-2.png'
-import thirdNews from './assets/img/img-news-3.png'
-import Footer from '../footer/Footer'
+import React from "react";
+import Header from "../header/Header";
+import Block from "../block/Block";
+import { Link } from "react-router-dom";
+import "./main.scss";
+import firstDiscount from "./assets/img/1-discount.png";
+import secondDiscount from "./assets/img/2-discount.png";
+import thirdDiscount from "./assets/img/3-discount.png";
+import fourDiscount from "./assets/img/4-discount.png";
+import fiveDiscount from "./assets/img/5-discount.png";
+import sixDiscount from "./assets/img/6-discount.png";
+import Footer from "../footer/Footer";
 
 export default class Main extends React.Component {
-  render () {
+  render() {
     return (
       <div className="main-container">
         <div className="up">
           <Header />
-
           <h1 className="main-h1">БЛИЖАЙШИЕ МЕРОПРИЯТИЯ</h1>
           <div className="up-events">
-            <Link to="/event_info">
-              {' '}
-              <Block src={first} p="Детский лагерь Smart Camp" />{' '}
-            </Link>
-            <Link to="/event_info">
-              {' '}
+            <Link>
+              {" "}
               <Block
-                src={second}
-                p="Молодёжный оздоровительный лагерь 'Ямал'"
+                src="https://www.mos.ru/upload/newsfeed/newsfeed/1200x630_ms-sept-kopiya.jpg"
+                p="Показ фильмов-победителей международного фестиваля короткого метра Moscow Shorts"
+              />{" "}
+            </Link>
+            <Link>
+              {" "}
+              <Block
+                src="https://topstudents.ru/wp-content/uploads/2019/11/mJvzyXuUhg4.jpg"
+                p="Фестиваль «Байкал. Магия воды»"
               />
             </Link>
-            <Link to="/event_info">
-              {' '}
+            <Link>
+              {" "}
               <Block
-                src={third}
-                p="Международный молодежный центр I&Camp 2019 Республика Крым"
+                src="https://topstudents.ru/wp-content/uploads/2019/11/442cb7dafe77af0633961622252c0dbf-1024x683.jpg"
+                p="5D-кинотеатр «Космическая сфера»"
               />
             </Link>
           </div>
-
+          <Link to="/events">
+            <div className="MainBtn">
+              <button className="signIn btnMain">Все мероприятия</button>
+            </div>
+          </Link>
+        </div>
+        <div className="mainDiscount">
           <h1 className="main-h1">СКИДКИ</h1>
+
           <div className="discount">
             <div className="img-discount">
               <img src={firstDiscount} alt="Театр" />
@@ -67,30 +70,44 @@ export default class Main extends React.Component {
               <img src={sixDiscount} alt="Театр" />
             </div>
           </div>
-
+          <Link to="/sale">
+            <div className="MainBtn">
+              <button className="signIn btnMain">Все скидки</button>
+            </div>
+          </Link>
+        </div>
+        <div className="news1">
           <h1 className="main-h1">НОВОСТИ</h1>
-          <div className="news-container">
-            <div className="news">
-              <div className="img-news-first">
-                <img src={firstNews} width="100%" alt="first news" />
-              </div>
-            </div>
-            <div className="news">
-              <div className="img-news-second">
-                <img src={secondNews} width="100%" alt="first news" />
-              </div>
-              <div className="discription-news">dqwdqwd</div>
-            </div>
-            <div className="news">
-              <div className="img-news-third">
-                <img src={thirdNews} width="100%" alt="first news" />
-              </div>
-              <div className="discription-news">dsad</div>
-            </div>
+          <div className="up-events">
+            <Link>
+              <Block
+                src="https://topstudents.ru/wp-content/uploads/2019/11/%D0%9C%D0%90-%D1%80%D0%B0%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B0-600%D1%85400-1.jpg"
+                p="Московский акселератор начал прием заявок"
+              />{" "}
+            </Link>
+            <Link>
+              {" "}
+              <Block
+                src="https://topstudents.ru/wp-content/uploads/2019/11/m5k6S7Ecf6U-1024x1024.jpg"
+                p="«Диалог с профессионалом»"
+              />
+            </Link>
+            <Link>
+              {" "}
+              <Block
+                src="https://topstudents.ru/wp-content/uploads/2019/11/442cb7dafe77af0633961622252c0dbf-1024x683.jpg"
+                p="5D-кинотеатр «Космическая сфера»"
+              />
+            </Link>
           </div>
+          <Link to="/news">
+            <div className="MainBtn">
+              <button className="signIn btnMain1">Все новости</button>
+            </div>
+          </Link>
         </div>
         <Footer />
       </div>
-    )
+    );
   }
 }
