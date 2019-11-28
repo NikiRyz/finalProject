@@ -47,9 +47,7 @@ class Header extends React.Component {
                     <div onClick={this.handleClickLogin}>
                       <button className="signIn">Войти</button>
                     </div>
-                    <div onClick={this.handleClickRegistration}>
-                      <button className="registration">Регистрация</button>
-                    </div>
+                   
                   </React.Fragment>
                 )}
               />

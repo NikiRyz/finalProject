@@ -1,37 +1,36 @@
-import React from 'react'
-import Header from '../header/Header'
-import Block from '../block/Block'
-import { Link } from 'react-router-dom'
-import './news.scss'
-import Footer from '../footer/Footer'
-import first from '../pageMain/assets/img/1-event.png'
-import second from '../pageMain/assets/img/2-event.png'
-import third from '../pageMain/assets/img/3-event.png'
+import React from "react";
+import Header from "../header/Header";
+import Block from "../block/Block";
+import { Link } from "react-router-dom";
+import "./news.scss";
+import Footer from "../footer/Footer";
 
 export default class News extends React.Component {
-  render () {
+  render() {
     return (
       <div className="">
         <div className="main">
           <Header />
 
           <div className="up-events">
-            <Link to="/event_info">
-              {' '}
-              <Block src={first} p="Детский лагерь Smart Camp" />{' '}
-            </Link>
-            <Link to="/event_info">
-              {' '}
+            <Link to="/news">
               <Block
-                src={second}
-                p="Молодёжный оздоровительный лагерь 'Ямал'"
+                src="https://topstudents.ru/wp-content/uploads/2019/11/%D0%9C%D0%90-%D1%80%D0%B0%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B0-600%D1%85400-1.jpg"
+                p="Московский акселератор начал прием заявок"
+              />{" "}
+            </Link>
+            <Link to="/news">
+              {" "}
+              <Block
+                src="https://topstudents.ru/wp-content/uploads/2019/11/m5k6S7Ecf6U-1024x1024.jpg"
+                p="«Диалог с профессионалом»"
               />
             </Link>
-            <Link to="/event_info">
-              {' '}
+            <Link to="/news">
+              {" "}
               <Block
-                src={third}
-                p="Международный молодежный центр I&Camp 2019 Республика Крым"
+                src="https://topstudents.ru/wp-content/uploads/2019/10/qNLdPS2px9U-1024x682.jpg"
+                p="В Москве прошел квест, посвященный открытию Дома Студента"
               />
             </Link>
           </div>
@@ -39,6 +38,6 @@ export default class News extends React.Component {
 
         <Footer />
       </div>
-    )
+    );
   }
 }

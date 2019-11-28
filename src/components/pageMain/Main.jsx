@@ -19,21 +19,19 @@ export default class Main extends React.Component {
           <Header />
           <h1 className="main-h1">БЛИЖАЙШИЕ МЕРОПРИЯТИЯ</h1>
           <div className="up-events">
-            <Link>
-              {" "}
+            <Link to="/events">
               <Block
                 src="https://www.mos.ru/upload/newsfeed/newsfeed/1200x630_ms-sept-kopiya.jpg"
                 p="Показ фильмов-победителей международного фестиваля короткого метра Moscow Shorts"
-              />{" "}
+              />
             </Link>
-            <Link>
-              {" "}
+            <Link to="/events">
               <Block
                 src="https://topstudents.ru/wp-content/uploads/2019/11/mJvzyXuUhg4.jpg"
                 p="Фестиваль «Байкал. Магия воды»"
               />
             </Link>
-            <Link>
+            <Link to="/events">
               {" "}
               <Block
                 src="https://topstudents.ru/wp-content/uploads/2019/11/442cb7dafe77af0633961622252c0dbf-1024x683.jpg"
@@ -49,54 +47,56 @@ export default class Main extends React.Component {
         </div>
         <div className="mainDiscount">
           <h1 className="main-h1">СКИДКИ</h1>
-
-          <div className="discount">
-            <div className="img-discount">
-              <img src={firstDiscount} alt="Театр" />
-            </div>
-            <div className="img-discount">
-              <img src={secondDiscount} alt="Театр" />
-            </div>
-            <div className="img-discount">
-              <img src={thirdDiscount} alt="Театр" />
-            </div>
-            <div className="img-discount">
-              <img src={fourDiscount} alt="Театр" />
-            </div>
-            <div className="img-discount">
-              <img src={fiveDiscount} alt="Театр" />
-            </div>
-            <div className="img-discount">
-              <img src={sixDiscount} alt="Театр" />
-            </div>
-          </div>
           <Link to="/sale">
-            <div className="MainBtn">
-              <button className="signIn btnMain">Все скидки</button>
+            <div className="discount">
+              <div className="img-discount">
+                <img src={firstDiscount} alt="Театр" />
+              </div>
+              <div className="img-discount">
+                <img src={secondDiscount} alt="Театр" />
+              </div>
+              <div className="img-discount">
+                <img src={thirdDiscount} alt="Театр" />
+              </div>
+              <div className="img-discount">
+                <img src={fourDiscount} alt="Театр" />
+              </div>
+              <div className="img-discount">
+                <img src={fiveDiscount} alt="Театр" />
+              </div>
+              <div className="img-discount">
+                <img src={sixDiscount} alt="Театр" />
+              </div>
             </div>
+            <Link to="/sale">
+              <div className="MainBtn">
+                <button className="signIn btnMain">Все скидки</button>
+              </div>
+            </Link>
           </Link>
         </div>
+
         <div className="news1">
           <h1 className="main-h1">НОВОСТИ</h1>
           <div className="up-events">
-            <Link>
+            <Link to="/news">
               <Block
                 src="https://topstudents.ru/wp-content/uploads/2019/11/%D0%9C%D0%90-%D1%80%D0%B0%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B0-600%D1%85400-1.jpg"
                 p="Московский акселератор начал прием заявок"
               />{" "}
             </Link>
-            <Link>
+            <Link to="/news">
               {" "}
               <Block
                 src="https://topstudents.ru/wp-content/uploads/2019/11/m5k6S7Ecf6U-1024x1024.jpg"
                 p="«Диалог с профессионалом»"
               />
             </Link>
-            <Link>
+            <Link to="/news">
               {" "}
               <Block
-                src="https://topstudents.ru/wp-content/uploads/2019/11/442cb7dafe77af0633961622252c0dbf-1024x683.jpg"
-                p="5D-кинотеатр «Космическая сфера»"
+                src="https://topstudents.ru/wp-content/uploads/2019/10/qNLdPS2px9U-1024x682.jpg"
+                p="В Москве прошел квест, посвященный открытию Дома Студента"
               />
             </Link>
           </div>
