@@ -8,9 +8,15 @@ class ChangeEvent extends React.Component {
   render () {
     return (
       <div className="form-add-events-container">
-        <form onSubmit={this.props.submit} method="put">
+        <form method="post">
           <div aria-hidden="true">
-            <Field name="id" value={this.props.id} component="input" />
+            <Field
+              name="id"
+              component={Input}
+              type="text"
+              placeholder={`Пропишите id мероприятия: ${this.props.id}`}
+            />
+      
             <Field
               name="title"
               component={Input}
@@ -113,7 +119,7 @@ class ChangeEvent extends React.Component {
             />
           </div>
 
-          <input type="submit" value="Отправить" onClick={this.props.submit}/>
+          <input type="submit" value="Отправить"/>
         </form>
       </div>
     )
