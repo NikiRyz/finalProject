@@ -7,6 +7,7 @@ import Events from './containers/Events'
 import Sale from './components/pageSale/sale'
 import News from './components/pageNews/news'
 import pageInfo from './containers/EventInfo'
+import Delete from './components/deletePage/delete'
 import './App.css'
 import AddEventsPage from './containers/addEvent'
 import changeEvent from './containers/changeEvent'
@@ -25,9 +26,9 @@ class App extends React.Component {
           <Route exact path="/registration" component={Registration} />
           <Route exact path="/events/events_add" />
           <Route exact path="/event_info" component={pageInfo} />
-          <Route path="/delete/" />
           <Route exact path="/events/change_event" />
           <Route exact path="/change_event" component={changeEvent} />
+          <Route path='/delete/' component={Delete}/>
           <Redirect to="/" />
         </Switch>
       </BrowserRouter>
