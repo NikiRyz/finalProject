@@ -1,11 +1,15 @@
-import React from 'react'
-import './Info.scss'
-import { Link } from 'react-router-dom'
+import React from "react";
+import "./Info.scss";
+import { Link } from "react-router-dom";
 
 class Info extends React.Component {
-  render () {
-    const { event, deleteEvent } = this.props
-    const link = '/delete/' + event.id
+  render() {
+    const { event, deleteEvent } = this.props;
+    const link = "/delete/" + event.id;
+    const eventDay = event.date.replace(
+      /(\d+).(\d+).(\d+)/,
+      "$3." + "$2." + "$1"
+    );
     if (event != 0) {
       return (
         <div className="info">
@@ -18,7 +22,7 @@ class Info extends React.Component {
               <h3>Организатор</h3>
               <p> {event.organizer} </p>
               <h3>Дата</h3>
-              <p> {event.date}</p>
+              <p> {eventDay}</p>
               <h3>Время проведения</h3>
               <p> {event.time}</p>
               <h3>Адресс</h3>
@@ -34,7 +38,7 @@ class Info extends React.Component {
               <Link
                 to={link}
                 onClick={() => {
-                  return deleteEvent(event.id)
+                  return deleteEvent(event.id);
                 }}
               >
                 <button className="btn_see">Удалить</button>
@@ -42,9 +46,9 @@ class Info extends React.Component {
             </div>
           </div>
         </div>
-      )
-    } else return <h2 className="H">Нет информации о мероприятии :( </h2>
+      );
+    } else return <h2 className="H">Нет информации о мероприятии :( </h2>;
   }
 }
 
-export default Info
+export default Info;

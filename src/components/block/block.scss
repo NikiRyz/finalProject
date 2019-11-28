@@ -11,10 +11,6 @@
   }
 }
 
-/** {*/
-/*  position: relative;*/
-/*}*/
-
 .block {
   position: relative;
   width: 300px;
@@ -27,18 +23,50 @@
   -o-transition: 1s;
   transition: 1s;
 }
+
 .block:hover {
-  animation: bounce 1s;
+  animation: bounce 1.5s;
 }
 
-.block img {
-  /*position: relative;*/
+.block .i {
+  background-color: #fdc526;
+  h3 {
+    margin: 2%;
+
+    position: absolute;
+    top: 0px;
+    p {
+      visibility: hidden;
+      color: white;
+    }
+  }
+}
+
+.block .i:hover {
+  h3 {
+    position: absolute;
+
+    p {
+      visibility: visible;
+      position: relative;
+      color: white;
+    }
+  }
+  img {
+    opacity: 5%;
+    transition: 1.5s;
+  }
+}
+.block .i img {
+  opacity: 100%;
   width: 100%;
   height: 100%;
   padding: 0;
+
+  top: 0px;
 }
 
-.block p {
+.block .P {
   font-weight: 500;
   padding: 10px 20px;
   color: black;
