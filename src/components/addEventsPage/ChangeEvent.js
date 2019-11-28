@@ -11,11 +11,10 @@ class ChangeEvent extends React.Component {
         <form method="post">
           <div aria-hidden="true">
             <Field
-              name={`${this.props.id}`}
+              name="id"
               component={Input}
               type="text"
               placeholder={this.props.id}
-              disabled={true}
             />
       
             <Field
