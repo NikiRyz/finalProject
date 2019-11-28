@@ -14,7 +14,7 @@ class ChangeEvent extends React.Component {
               name="id"
               component={Input}
               type="text"
-              placeholder={this.props.id}
+              placeholder={`Пропишите id мероприятия: ${this.props.id}`}
             />
       
             <Field
