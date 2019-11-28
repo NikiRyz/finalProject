@@ -88,8 +88,9 @@ class Events extends React.Component {
           <div className="up-events">
             <Event events={events} chooseEvent={chooseEventAction} />
           </div>
+
           {
-            localStorage.getItem('admin') != null ? <AddEvent/> : null
+            localStorage.getItem('admin@ru') != null ? <AddEvent/> : null
           }
         </div>
         <Footer />

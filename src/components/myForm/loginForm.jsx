@@ -1,12 +1,16 @@
-import React from 'react'
-import { Field } from 'redux-form'
-import { Input } from './FormsControls/FormsControls'
-import { requiredField, validatePasswordCreator } from './validators/validators'
+import React from "react";
+import { Field } from "redux-form";
+import { Input } from "./FormsControls/FormsControls";
+import { Link } from "react-router-dom";
+import {
+  requiredField,
+  validatePasswordCreator
+} from "./validators/validators";
 
-const validatePassCreator = validatePasswordCreator(8)
+const validatePassCreator = validatePasswordCreator(8);
 
 export default class LoginForm extends React.Component {
-  render () {
+  render() {
     return (
       <form onSubmit={this.props.handleSubmit}>
         <div className="form-container">
@@ -35,7 +39,7 @@ export default class LoginForm extends React.Component {
           </div>
 
           <div className="r">
-            {' '}
+            {" "}
             <Field
               type="checkbox"
               name="consent"
@@ -43,13 +47,14 @@ export default class LoginForm extends React.Component {
               component={Input}
             />
             <label className="consent" id="consent">
-              Запомнить меня{' '}
+              Запомнить меня{" "}
             </label>
           </div>
-
-          <input id="btn" type="submit" value="Войти" />
+          <Link to="/events">
+            <input id="btn" type="submit" value="Войти" />
+          </Link>
         </div>
       </form>
-    )
+    );
   }
 }
